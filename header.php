@@ -35,7 +35,7 @@ define( "AUSIRAN_HEADER_RIGHT", get_theme_mod( 'ausiran_header_right', false ) )
 const AUSIRAN_MENU_COL       = AUSIRAN_HEADER_RIGHT ? '' : 'header-right-enable';
 
 //Preloader
-const AUSIRAN_PRELOADER_ICON = AUSIRAN_THEME_IMAGES_DIR . '/logos/logo_placeholder_1.svg';
+const AUSIRAN_PRELOADER_ICON = AUSIRAN_THEME_IMAGES_DIR . '/logos/logo_1.svg';
 define( "AUSIRAN_PRELOADER_LOGO", get_theme_mod( 'ausiran_preloader_logo', AUSIRAN_PRELOADER_ICON ) );
 ?>
 
