@@ -2,11 +2,11 @@
 <?php
     the_content();
     wp_link_pages( [
-        'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'gainioz' ) . '</span>',
+        'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'ausiran' ) . '</span>',
         'after'       => '</div>',
         'link_before' => '<span>',
         'link_after'  => '</span>',
-        'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'gainioz' ) . ' </span>%',
+        'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'ausiran' ) . ' </span>%',
         'separator'   => '<span class="screen-reader-text"> </span>',
     ] );
 

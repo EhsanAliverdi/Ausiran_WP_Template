@@ -4,15 +4,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package gainioz
+ * @package ausiran
  */
 
-    $gainioz_video_url = function_exists( 'get_field' ) ? get_field( 'fromate_style' ) : NULL;
+    $ausiran_video_url = function_exists( 'get_field' ) ? get_field( 'fromate_style' ) : NULL;
     $categories = get_the_terms( $post->ID, 'category' );
-    $gainioz_blog_date = get_theme_mod( 'gainioz_blog_date', true );
-    $gainioz_blog_comments = get_theme_mod( 'gainioz_blog_comments', true );
-    $gainioz_blog_author = get_theme_mod( 'gainioz_blog_author', true );
-    $gainioz_blog_cat = get_theme_mod( 'gainioz_blog_cat', false );
+    $ausiran_blog_date = get_theme_mod( 'ausiran_blog_date', true );
+    $ausiran_blog_comments = get_theme_mod( 'ausiran_blog_comments', true );
+    $ausiran_blog_author = get_theme_mod( 'ausiran_blog_author', true );
+    $ausiran_blog_cat = get_theme_mod( 'ausiran_blog_cat', false );
     if ( is_single() ):
 ?>
 
@@ -22,10 +22,10 @@
             <div class="blogBlock__figure overflow-hidden">
             <?php the_post_thumbnail( 'full', ['class' => 'img-responsive blogBlock__figure__image image-saturation'] );?>
 
-            <?php if(!empty($gainioz_video_url)) : ?>
+            <?php if(!empty($ausiran_video_url)) : ?>
             <div class="avideo-btn-4">
                 <div class="avideo-btn play_btn">
-                    <a class="popup-video" href="<?php print esc_url( $gainioz_video_url );?>">
+                    <a class="popup-video" href="<?php print esc_url( $ausiran_video_url );?>">
                         <i class="fas fa-play"></i>
                     </a>
                 </div>
@@ -37,11 +37,11 @@
             <div class="blogBlock__content">
                     <div class="blogBlock__meta mb-20">
                         <ul class="blogBlock__meta__list">
-                            <?php if ( !empty($gainioz_blog_date) ): ?>
+                            <?php if ( !empty($ausiran_blog_date) ): ?>
                             <li><span class="blogBlock__meta__text"><i class="far fa-calendar-check"></i> <?php the_time( get_option('date_format') ); ?></span></li>
                              <?php endif;?>
 
-                             <?php if ( !empty($gainioz_blog_cat) ): ?>
+                             <?php if ( !empty($ausiran_blog_cat) ): ?>
                             <li>
                                 <span class="blogBlock__meta__text">
                                     <i class="far fa-tag"></i> <a href="<?php print esc_url(get_category_link($categories[0]->term_id)); ?>"><?php echo esc_html($categories[0]->name); ?></a> 
@@ -49,11 +49,11 @@
                             </li>
                              <?php endif;?>
 
-                            <?php if ( !empty($gainioz_blog_author) ): ?>
+                            <?php if ( !empty($ausiran_blog_author) ): ?>
                             <li><a class="blogBlock__meta__text" href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );?>"><i class="far fa-user"></i> <?php print get_the_author();?> </a></li>
                             <?php endif;?>
 
-                            <?php if ( !empty($gainioz_blog_comments) ): ?>
+                            <?php if ( !empty($ausiran_blog_comments) ): ?>
                             <li><a class="blogBlock__meta__text" href="<?php comments_link();?>"><i class="fal fa-comments"></i> <?php comments_number();?></a></li>
                             <?php endif;?>
                         </ul>
@@ -67,14 +67,14 @@
                 <?php the_content();?>
                     <?php
                         wp_link_pages( [
-                            'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'gainioz' ),
+                            'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'ausiran' ),
                             'after'       => '</div>',
                             'link_before' => '<span class="page-number">',
                             'link_after'  => '</span>',
                         ] );
                     ?>
                 </div>
-                <?php print gainioz_get_tag();?>
+                <?php print ausiran_get_tag();?>
             </div>
 
     </article>
@@ -88,10 +88,10 @@ else: ?>
         <?php if ( has_post_thumbnail() ): ?>
             <div class="blogBlock__figure overflow-hidden">
             <a href="<?php the_permalink();?>" class="blogBlock__figure__link" ><?php the_post_thumbnail( 'full', ['class' => 'img-responsive blogBlock__figure__image image-saturation'] );?></a>
-            <?php if(!empty($gainioz_video_url)) : ?>
+            <?php if(!empty($ausiran_video_url)) : ?>
             <div class="avideo-btn-4">
                 <div class="avideo-btn play_btn">
-                    <a class="popup-video" href="<?php print esc_url( $gainioz_video_url );?>">
+                    <a class="popup-video" href="<?php print esc_url( $ausiran_video_url );?>">
                         <i class="fas fa-play"></i>
                     </a>
                 </div>
@@ -102,11 +102,11 @@ else: ?>
         <div class="blogBlock__content">
             <div class="blogBlock__meta mb-20">
                 <ul class="blogBlock__meta__list">
-                    <?php if ( !empty($gainioz_blog_date) ): ?>
+                    <?php if ( !empty($ausiran_blog_date) ): ?>
                     <li><span class="blogBlock__meta__text"><i class="far fa-calendar-check"></i> <?php the_time( get_option('date_format') ); ?></span></li>
                      <?php endif;?>
 
-                     <?php if ( !empty($gainioz_blog_cat) ): ?>
+                     <?php if ( !empty($ausiran_blog_cat) ): ?>
                     <li>
                         <span class="blogBlock__meta__text">
                             <i class="far fa-tag"></i> <a href="<?php print esc_url(get_category_link($categories[0]->term_id)); ?>"><?php echo esc_html($categories[0]->name); ?></a> 
@@ -114,11 +114,11 @@ else: ?>
                     </li>
                      <?php endif;?>
 
-                    <?php if ( !empty($gainioz_blog_author) ): ?>
+                    <?php if ( !empty($ausiran_blog_author) ): ?>
                     <li><a class="blogBlock__meta__text" href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );?>"><i class="far fa-user"></i> <?php print get_the_author();?> </a></li>
                     <?php endif;?>
 
-                    <?php if ( !empty($gainioz_blog_comments) ): ?>
+                    <?php if ( !empty($ausiran_blog_comments) ): ?>
                     <li><a class="blogBlock__meta__text" href="<?php comments_link();?>"><i class="fal fa-comments"></i> <?php comments_number();?></a></li>
                     <?php endif;?>
                 </ul>
@@ -132,14 +132,14 @@ else: ?>
             <!-- blog btn -->
 
             <?php
-                $gainioz_blog_btn = get_theme_mod( 'gainioz_blog_btn', 'Read More' );
-                $gainioz_blog_btn_switch = get_theme_mod( 'gainioz_blog_btn_switch', true );
+                $ausiran_blog_btn = get_theme_mod( 'ausiran_blog_btn', 'Read More' );
+                $ausiran_blog_btn_switch = get_theme_mod( 'ausiran_blog_btn_switch', true );
             ?>
 
-            <?php if ( !empty( $gainioz_blog_btn_switch ) ): ?>
+            <?php if ( !empty( $ausiran_blog_btn_switch ) ): ?>
             <div class="blog-btn">
                    <a class="btn btn--styleOne btn--secondary it-btn" href="<?php the_permalink();?>">
-                  <span class="btn__text"><?php print esc_html( $gainioz_blog_btn );?></span>
+                  <span class="btn__text"><?php print esc_html( $ausiran_blog_btn );?></span>
                   <span class="it-btn__inner">
                   <span class="it-btn__blobs">
                     <span class="it-btn__blob"></span>
@@ -148,7 +148,7 @@ else: ?>
                   <span class="it-btn__blob"></span>
                   </span>
                   </span>
-                  <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                       <filter class="goo">
                         <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">

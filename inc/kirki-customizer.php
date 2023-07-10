@@ -461,7 +461,7 @@ function _blog_fields( $fields ) {
         'settings' => 'ausiran_blog_author',
         'label'    => esc_html__( 'Blog Author Meta On/Off', 'ausiran' ),
         'section'  => 'blog_setting',
-        'default'  => '1',
+        'default'  => '0',
         'priority' => 10,
         'choices'  => [
             'on'  => esc_html__( 'Enable', 'ausiran' ),
@@ -473,7 +473,7 @@ function _blog_fields( $fields ) {
         'settings' => 'ausiran_blog_date',
         'label'    => esc_html__( 'Blog Date Meta On/Off', 'ausiran' ),
         'section'  => 'blog_setting',
-        'default'  => '1',
+        'default'  => '0',
         'priority' => 10,
         'choices'  => [
             'on'  => esc_html__( 'Enable', 'ausiran' ),
@@ -485,7 +485,7 @@ function _blog_fields( $fields ) {
         'settings' => 'ausiran_blog_comments',
         'label'    => esc_html__( 'Blog Comments Meta On/Off', 'ausiran' ),
         'section'  => 'blog_setting',
-        'default'  => '1',
+        'default'  => '0',
         'priority' => 10,
         'choices'  => [
             'on'  => esc_html__( 'Enable', 'ausiran' ),
@@ -510,6 +510,7 @@ function _blog_fields( $fields ) {
         'settings' => 'ausiran_blog_btn',
         'label'    => esc_html__( 'Blog Button text', 'ausiran' ),
         'section'  => 'blog_setting',
+        'description' => __( 'The text for the button that is linked to the post', 'ausiran' ),
         'default'  => esc_html__( 'Read More', 'ausiran' ),
         'priority' => 10,
     ];
@@ -520,6 +521,7 @@ function _blog_fields( $fields ) {
         'label'    => esc_html__( 'Blog Title', 'ausiran' ),
         'section'  => 'blog_setting',
         'default'  => esc_html__( 'Blog', 'ausiran' ),
+        'description' => __( 'This is the title that will be shown on the breadcrumb. For this to work breadcrumb should be enabled!', 'ausiran' ),
         'priority' => 10,
     ];
 
