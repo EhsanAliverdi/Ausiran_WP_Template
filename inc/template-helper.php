@@ -825,13 +825,14 @@ if ( !function_exists( 'ausiran_pagination' ) ) {
 
 // theme color
 function ausiran_custom_color() {
-  $ausiran_color_option_prim = get_theme_mod( 'ausiran_color_option_prim', '#7fb432' );
-  $ausiran_color_option_sec = get_theme_mod( 'ausiran_color_option_sec', '#eb9309' );
-  $ausiran_color_option_body = get_theme_mod( 'ausiran_color_option_body', '#666666' );
-  $ausiran_color_option_black = get_theme_mod( 'ausiran_color_option_black', '#000' );
-  $ausiran_color_option_white = get_theme_mod( 'ausiran_color_option_white', '#fff' );
+	$ausiran_color_option_prim = get_theme_mod( 'ausiran_color_option_prim', '#808080' );
+	$ausiran_color_option_sec = get_theme_mod( 'ausiran_color_option_sec', '#444444' );
+	$ausiran_color_option_body = get_theme_mod( 'ausiran_color_option_body', '#CCCCCC' );
+	$ausiran_color_option_black = get_theme_mod( 'ausiran_color_option_black', '#000000' );
+	$ausiran_color_option_white = get_theme_mod( 'ausiran_color_option_white', '#FFFFFF' );
 
-  wp_enqueue_style( 'ausiran-custom', AUSIRAN_THEME_CSS_DIR . 'ausiran-custom.css', [] );
+
+	wp_enqueue_style( 'ausiran-custom', AUSIRAN_THEME_CSS_DIR . 'ausiran-custom.css', [] );
 
   if ( !empty($ausiran_color_option_prim) || !empty($ausiran_color_option_sec) || !empty($ausiran_color_option_body) || !empty($ausiran_color_option_black) || !empty($ausiran_color_option_white)) {
       $custom_css = '';

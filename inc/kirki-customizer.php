@@ -167,7 +167,7 @@ function _header_fields( $fields ) {
 		'settings' => 'ausiran_preloader_text',
 		'label'    => esc_html__( 'Preloader Text', 'ausiran' ),
 		'section'  => 'section_header_settings',
-		'default'  => esc_html__( 'DO GOOD FOR OTHERS', 'ausiran' ),
+		'default'  => esc_html__( 'WOMAN LIFE FREEDOM', 'ausiran' ),
 		'priority' => 10,
 		'active_callback' => [
 			[
@@ -786,7 +786,7 @@ function ausiran_color_fields( $fields ) {
         'label'       => __( 'Primary Color', 'ausiran' ),
         'description' => esc_html__( 'This is a Primary color control.', 'ausiran' ),
         'section'     => 'color_setting',
-        'default'     => '#7fb432',
+        'default'     => '#808080',
         'priority'    => 10,
 
     ];  
@@ -798,7 +798,7 @@ function ausiran_color_fields( $fields ) {
         'label'       => __( 'Secondary Color', 'ausiran' ),
         'description' => esc_html__( 'This is a Secondary color control.', 'ausiran' ),
         'section'     => 'color_setting',
-        'default'     => '#eb9309',
+        'default'     => '#444444',
         'priority'    => 10,
     ];    
 
@@ -809,7 +809,7 @@ function ausiran_color_fields( $fields ) {
         'label'       => __( 'Body Color', 'ausiran' ),
         'description' => esc_html__( 'This is a Body color control.', 'ausiran' ),
         'section'     => 'color_setting',
-        'default'     => '#666666',
+        'default'     => '#808080',
         'priority'    => 10,
     ];
 
