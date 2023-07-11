@@ -4,10 +4,10 @@
  * ausiran header
  */
 function ausiran_header() {
-	$AUSIRAN_BUTTON_TEXT=get_theme_mod( 'ausiran_button_text', __( 'donate now ', 'ausiran' )  );
-	$AUSIRAN_BUTTON_LINK=get_theme_mod( 'ausiran_button_link', __( '#', 'ausiran' ) );
-	$AUSIRAN_HEADER_RIGHT=get_theme_mod( 'ausiran_header_right', false );
-	$AUSIRAN_MENU_COL=AUSIRAN_HEADER_RIGHT ? '' : 'header-right-enable' ;
+	$ausiran_button_text  =get_theme_mod( 'ausiran_button_text', __( 'donate now ', 'ausiran' )  );
+	$ausiran_button_link  =get_theme_mod( 'ausiran_button_link', __( '#', 'ausiran' ) );
+	$ausiran_header_right =get_theme_mod( 'ausiran_header_right', false );
+	$ausiran_menu_col     =AUSIRAN_HEADER_RIGHT ? '' : 'header-right-enable' ;
 
 
 	 ?>
@@ -17,7 +17,7 @@ function ausiran_header() {
         <div class="container container--custom">
           <div class="row">
             <div class="col-12">
-              <div class="header__wrapper <?php print esc_attr($AUSIRAN_MENU_COL); ?> ">
+              <div class="header__wrapper <?php print esc_attr($ausiran_menu_col); ?> ">
                 <!-- logo start -->
                 <div class="header__logo">
                     <div class="header__logo__link header__logo__image">
@@ -33,7 +33,7 @@ function ausiran_header() {
                 </div>
                 <!-- Main Menu End -->
                 <!-- Header Right Buttons Search Cart -->
-                  <?php if (!empty($AUSIRAN_HEADER_RIGHT)): ?>
+                  <?php if (!empty($ausiran_header_right)): ?>
                   <div class="header-right-wrapper d-flex align-items-center justify-content-end">
                     
                     <div class="header__right">
@@ -58,10 +58,10 @@ function ausiran_header() {
                         </ul>
                       </div>
 
-                      <?php if (!empty($AUSIRAN_BUTTON_TEXT)): ?>
+                      <?php if (!empty($ausiran_button_text)): ?>
                         <div class="header__button d-none d-lg-block">
-                          <a class="btn btn--styleOne btn--secondary it-btn" href="<?php print esc_url($AUSIRAN_BUTTON_LINK); ?>">
-                            <span class="btn__text"><?php print esc_html($AUSIRAN_BUTTON_TEXT); ?></span>
+                          <a class="btn btn--styleOne btn--secondary it-btn" href="<?php print esc_url($ausiran_button_link); ?>">
+                            <span class="btn__text"><?php print esc_html($ausiran_button_text); ?></span>
                             <i class="fas fa-heart btn__icon"></i>
                             <span class="it-btn__inner">
                                 <span class="it-btn__blobs">
@@ -71,7 +71,7 @@ function ausiran_header() {
                                 <span class="it-btn__blob"></span>
                               </span>
                             </span>
-                            <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg">
                               <defs>
                                 <filter >
                                   <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">

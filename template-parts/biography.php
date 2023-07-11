@@ -1,11 +1,11 @@
 <?php
     $author_data = get_the_author_meta( 'description', get_query_var( 'author' ) );
-    $author_info = get_the_author_meta( 'gainioz_write_by');
-    $facebook_url = get_the_author_meta( 'gainioz_facebook' );
-    $twitter_url = get_the_author_meta( 'gainioz_twitter' );
-    $linkedin_url = get_the_author_meta( 'gainioz_linkedin' );
-    $instagram_url = get_the_author_meta( 'gainioz_instagram' );
-    $gainioz_url = get_the_author_meta( 'gainioz_youtube' );
+    $author_info = get_the_author_meta( 'ausiran_write_by');
+    $facebook_url = get_the_author_meta( 'ausiran_facebook' );
+    $twitter_url = get_the_author_meta( 'ausiran_twitter' );
+    $linkedin_url = get_the_author_meta( 'ausiran_linkedin' );
+    $instagram_url = get_the_author_meta( 'ausiran_instagram' );
+    $ausiran_url = get_the_author_meta( 'ausiran_youtube' );
     $author_bio_avatar_size = 180;
     if ( $author_data != '' ):
 ?>

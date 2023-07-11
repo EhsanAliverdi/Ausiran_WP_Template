@@ -47,7 +47,7 @@ if ( !function_exists( 'ausiran_setup' ) ):
 		 * If you're building a theme based on ausiran, use a find and replace
 		 * to change 'ausiran' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'ausiran', get_template_directory() . '/languages' );
+//		load_theme_textdomain( 'ausiran', AUSIRAN_THEME_DIR. '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -69,8 +69,7 @@ if ( !function_exists( 'ausiran_setup' ) ):
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( [
-			'main-menu' => esc_html__( 'Main Menu', 'ausiran' ),
-			'onepage-menu' => esc_html__( 'Oenpage Menu', 'ausiran' ),
+			'main-menu' => esc_html__( 'Main Menu', 'ausiran' )
 		] );
 
 		/*
@@ -87,27 +86,17 @@ if ( !function_exists( 'ausiran_setup' ) ):
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'ausiran_custom_background_args', [
-			'default-color' => 'ffffff',
+			'default-color' => '#ffffff',
 			'default-image' => '',
 		] ) );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		//Enable custom header
-		add_theme_support( 'custom-header' );
+//		//Enable custom header
+//		add_theme_support( 'custom-header' );
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', [
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		] );
+
 
 		/**
 		 * Enable suporrt for Post Formats
@@ -115,11 +104,7 @@ if ( !function_exists( 'ausiran_setup' ) ):
 		 * see: https://codex.wordpress.org/Post_Formats
 		 */
 		add_theme_support( 'post-formats', [
-			'image',
-			'audio',
-			'video',
-			'gallery',
-			'quote',
+
 		] );
 
 		// Add support for Block Styles.

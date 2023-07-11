@@ -1082,7 +1082,7 @@ add_filter( 'kirki/fields', 'ausiran_slug_setting' );
 function ausiran_THEME_option( $name ) {
     $value = '';
     if ( class_exists( 'ausiran' ) ) {
-        $value = Kirki::get_option( ausiran_get_theme(), $name );
+        $value = ausiran_Kirki::get_option( ausiran_get_theme(), $name );
     }
 
     return apply_filters( 'ausiran_THEME_option', $value, $name );

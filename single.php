@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package gainioz
+ * @package ausiran
  */
 
 get_header();
@@ -35,7 +35,7 @@ $blog_column = is_active_sidebar( 'blog-sidebar' ) ? 8 : 12;
 										if ( get_previous_post_link() ): ?>
 											<div class="col-lg-6 col-md-6">
 												<div class="theme-navigation b-next-post text-left mb-30">
-													<span><?php print esc_html__( 'Prev Post', 'gainioz' );?></span>
+													<span><?php print esc_html__( 'Prev Post', 'ausiran' );?></span>
 													<h4><?php print get_previous_post_link( '%link ', '%title' );?></h4>
 												</div>
 											</div>
@@ -46,7 +46,7 @@ $blog_column = is_active_sidebar( 'blog-sidebar' ) ? 8 : 12;
 										if ( get_next_post_link() ): ?>
 											<div class="col-lg-6 col-md-6">
 												<div class="theme-navigation b-next-post text-left text-md-right  mb-30">
-													<span><?php print esc_html__( 'Next Post', 'gainioz' );?></span>
+													<span><?php print esc_html__( 'Next Post', 'ausiran' );?></span>
 													<h4><?php print get_next_post_link( '%link ', '%title' );?></h4>
 												</div>
 											</div>

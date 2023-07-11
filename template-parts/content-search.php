@@ -8,9 +8,9 @@
  */
 
 $categories = get_the_terms( $post->ID, 'category' );
-$ausiran_blog_date = get_theme_mod( 'ausiran_blog_date', true );
-$ausiran_blog_comments = get_theme_mod( 'ausiran_blog_comments', true );
-$ausiran_blog_author = get_theme_mod( 'ausiran_blog_author', true );
+$ausiran_blog_date = get_theme_mod( 'ausiran_blog_date', false );
+$ausiran_blog_comments = get_theme_mod( 'ausiran_blog_comments', false );
+$ausiran_blog_author = get_theme_mod( 'ausiran_blog_author', false );
 $ausiran_blog_cat = get_theme_mod( 'ausiran_blog_cat', false );
 
 if ( is_single() ):
